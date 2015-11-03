@@ -1,0 +1,30 @@
+{
+    "name": "danack/intahwebz",
+
+    "description": "The start of project intahwebz",
+
+    "require-dev": {
+        "mockery/mockery": "0.9.1",
+        "phpunit/phpunit": "4.4.5"
+    },
+
+    "require":{
+        "danack/asm": "0.0.1",
+        "danack/console": "^2.6.1",
+        "danack/jig": "^0.17.1",
+        "danack/tier": "^0.2.0",
+        "intahwebz/configurator": "^0.2.9",
+        "leafo/lessphp": "0.4.0",
+        "leafo/scssphp": "0.1.1",
+        "nikic/fast-route": "0.3.0",
+        "oyejorge/less.php": "v1.7.0.1",
+        "rdlowrey/auryn": "^1.0.2",
+        "room11/caching": "^0.0.4", 
+        "room11/http": "^0.0.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Intahwebz": "lib/"
+        }
+    }
+}
