@@ -3,7 +3,7 @@
     <description>Customised coding standard.</description>
     <arg name="tab-width" value="4"/>
     
-    <!-- <exclude-pattern>*Intahwebz*</exclude-pattern> -->
+    <exclude-pattern>*data/*</exclude-pattern>
     <exclude-pattern>*JigTest/CoverageTest.php</exclude-pattern>
 
     <rule ref="Generic.WhiteSpace.ScopeIndent">

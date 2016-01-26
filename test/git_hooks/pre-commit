@@ -43,7 +43,7 @@ then
 
     ./vendor/bin/phpcs --standard=./test/codesniffer.xml --encoding=utf-8 -n -p $FILES
     if [ $? != 0 ]
-    then
+    then`
         echo "Fix the error before commit."
         exit 1
     fi
