@@ -6,7 +6,6 @@ use Tier\JigBridge\TierJig;
 
 use Room11\HTTP\VariableMap;
 use ASM\Session;
-use TierJigSkeleton\Repository\UserRepo;
 
 class Basic
 {

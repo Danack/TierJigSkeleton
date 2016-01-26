@@ -15,7 +15,11 @@ Jig is a templating library for PHP. Like the others it is fast and help you mak
 </p>
 
 <p>
-    In the PHP world, frameworks such as Zend, Symfony or Laravel provide a lot of functionality:
+    Unlike the others it works well with dependency injection, which allows you to unit test your views.
+</p>
+
+<p>
+    Full documentation is available at <a href="http://phpjig.com/">phpjig.com</a>.
 </p>
 
      </div>
