@@ -15,7 +15,7 @@
         "danack/filefilter": "^0.0.4",
         "danack/jig": "^0.21.0",
         "danack/scripthelper": "^0.0.2",
-        "danack/tier": "^0.3.2",
+        "danack/tier": "^0.3.6",
         "intahwebz/configurator": "^0.4.0",
         "nikic/fast-route": "0.6.0",
         "oyejorge/less.php": "v1.7.0.1",
