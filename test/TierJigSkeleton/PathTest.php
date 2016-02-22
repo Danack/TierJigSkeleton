@@ -13,6 +13,7 @@ class PathTest extends BaseTestCase
     
     public function testPathError()
     {
+        
         $this->setExpectedException('Tier\TierException');
         new \Tier\Path\Path(null);
     }

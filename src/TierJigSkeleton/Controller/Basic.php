@@ -2,7 +2,7 @@
 
 namespace TierJigSkeleton\Controller;
 
-use Tier\JigBridge\TierJig;
+use Tier\Bridge\TierJig;
 
 use Room11\HTTP\VariableMap;
 use ASM\Session;

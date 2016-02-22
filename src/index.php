@@ -1,6 +1,6 @@
 <?php
 
-use Tier\Tier;
+use Tier\HTTPFunction;
 use Tier\TierHTTPApp;
 use Room11\HTTP\Request\CLIRequest;
 
@@ -8,7 +8,7 @@ ini_set('display_errors', 'on');
 
 require_once realpath(__DIR__).'/../vendor/autoload.php';
 
-Tier::setupErrorHandlers();
+HTTPFunction::setupErrorHandlers();
 
 //We are now capable of handling errors gracefully.
 ini_set('display_errors', 'off');
@@ -35,20 +35,20 @@ $app->addExpectedProduct('Room11\HTTP\Body');
 
 // Create the routing Executable. This will create an executable that
 // will generate the body of the response.
-$app->addRoutingExecutable(['Tier\JigBridge\JigRouter', 'routeRequest']);
+$app->addRoutingExecutable(['Tier\Bridge\JigFastRouter', 'routeRequest']);
 
 // Add an executable to save the session the generate the appropriate headers 
 $app->addBeforeSendExecutable('TierJigSkeleton\App::addSessionHeader');
 
 // Add an executable to send the response
-$app->addSendExecutable(['Tier\Tier', 'sendBodyResponse']);
+$app->addSendExecutable(['Tier\HTTPFunction', 'sendBodyResponse']);
 
 //Create the request
 if (strcasecmp(PHP_SAPI, 'cli') == 0) {
     $request = new CLIRequest('/notepad', 'example.com');
 }
 else {
-    $request = Tier::createRequestFromGlobals();
+    $request = HTTPFunction::createRequestFromGlobals();
 }
 
 // Run it
