@@ -5,6 +5,8 @@ use TierJigSkeleton\Config;
 use Jig\Jig;
 use Room11\Caching\LastModifiedStrategy;
 
+$socketDir = '/var/run/php-fpm';
+
 $default = [
     'app_name' => 'tierjigskeleton',
     'app_sitename' => 'tierjig',

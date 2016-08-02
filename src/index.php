@@ -1,5 +1,6 @@
 <?php
 
+use Auryn\Injector;
 use Tier\HTTPFunction;
 use Tier\TierHTTPApp;
 use Room11\HTTP\Request\CLIRequest;
@@ -27,8 +28,12 @@ if (!$appEnvIncluded) {
 // Read application config params
 $injectionParams = require_once "injectionParams.php";
 
+$injector = new Injector();
+
+$injectionParams->addToInjector($injector);
+
 // Create the Tier application
-$app = new TierHTTPApp($injectionParams);
+$app = new TierHTTPApp($injector);
 
 // Make the body that is generated be shared by TierApp
 $app->addExpectedProduct('Room11\HTTP\Body');
