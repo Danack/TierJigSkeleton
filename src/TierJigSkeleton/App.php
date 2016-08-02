@@ -5,6 +5,8 @@ namespace TierJigSkeleton;
 use ASM\Session;
 use ASM\SessionConfig;
 use ASM\SessionManager;
+use Doctrine\DBAL\DriverManager;
+use Doctrine\DBAL\Connection as DBConnection;
 use FastRoute\Dispatcher;
 use Jig\Jig;
 use Jig\JigConfig;
@@ -152,6 +154,17 @@ class App
         $dispatcher = \FastRoute\simpleDispatcher(['TierJigSkeleton\App', 'routesFunction']);
 
         return $dispatcher;
+    }
+
+    /**
+     * @return DBConnection
+     * @throws \Doctrine\DBAL\DBALException
+     */
+    public function createDBConnection()
+    {
+        $conn = DriverManager::getConnection(['pdo' => new \PDO('sqlite:testing.sqlite')]);
+        
+        return $conn;
     }
 
     public static function createServerRequest()

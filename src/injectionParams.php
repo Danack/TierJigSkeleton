@@ -40,9 +40,13 @@ $aliases = [
 // Delegate the creation of types to callables.
 $delegates = [
     'ASM\Session' => ['TierJigSkeleton\App', 'createSession'],
+    'Doctrine\DBAL\Connection' => 'TierJigSkeleton\App::createDBConnection',
     'Jig\JigConfig' => ['TierJigSkeleton\App', 'createJigConfig'],
     'ScriptHelper\ScriptInclude' => ['TierJigSkeleton\App', 'createScriptInclude'],
     'FastRoute\Dispatcher' => ['TierJigSkeleton\App', 'createDispatcher'],
+    
+    'TierJigSkeleton\Permission\UserTicketView' => 'TierJigSkeleton\ACL\SiteACL::createUserTicketView',
+    'TierJigSkeleton\Permission\UserTicketEdit' => 'TierJigSkeleton\ACL\SiteACL::createUserTicketEdit',
 ];
 
 // Define some params that can be injected purely by name.
