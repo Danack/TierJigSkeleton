@@ -55,6 +55,8 @@
 
     <rule ref="Generic.Files.LineLength.TooLong">
         <exclude-pattern>*TierApp.php</exclude-pattern>
+        <exclude-pattern>*DBPoke.php</exclude-pattern>
     </rule>
+    
 </ruleset>
         
